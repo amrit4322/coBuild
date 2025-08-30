@@ -1,0 +1,10 @@
+{
+  "Victoria": ["Burwood", "Melbourne", "Geelong", "Ballarat", "Bendigo"],
+  "New South Wales": ["Sydney", "Parramatta", "Newcastle", "Wollongong"],
+  "Queensland": ["Brisbane", "Gold Coast", "Cairns", "Townsville"],
+  "Western Australia": ["Perth", "Fremantle", "Mandurah"],
+  "South Australia": ["Adelaide", "Glenelg", "Mount Gambier"],
+  "Tasmania": ["Hobart", "Launceston", "Devonport"],
+  "Australian Capital Territory": ["Canberra"],
+  "Northern Territory": ["Darwin", "Alice Springs"]
+}

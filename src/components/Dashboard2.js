@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Row,
@@ -10,58 +10,142 @@ import {
   ProgressBar,
   ListGroup,
 } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+
+// COMPONENTS
 import TransportMap from "./TransportMap";
 import SchoolMap from "./SchoolMap";
 import DevelopmentImpactCalculator from "./DevelopmentImpactCalculator";
-import CommunitySentiment from "./CommunitySentiment";
-import YearSelector from "./YearSelector";
 import HousingHeatMap from "./HeatMapHousing";
 import ServicesHeatMap from "./HeatMapServices";
+import SentimentAnalysis from "./SentimentAnalysis";
+
+// DATA
+import permitsData from "../data/permitsummary.json";
+import schoolsData from "../data/schools.json";
+import transportData from "../data/transportfile.json";
+import suburbsData from "../data/suburbs.json";
+
+// 🔥 Fake metric calculation (demo-ready)
+function calculateMetrics(year, permits, schools, transport) {
+  // Just create some dynamic percentages based on year difference
+  const yearFactor = (year - 2025) / 25; // normalized factor 0 → 1
+  const totalPermits = permits.length;
+  const totalSchools = schools.length;
+  const totalTransport = Object.keys(transport).length;
+
+  return {
+    housing: Math.min(100, 50 + yearFactor * 50), // increases with year
+    schools: Math.min(100, 60 + yearFactor * 30), // schools capacity metric
+    transport: Math.min(100, 40 + yearFactor * 60),
+    services: Math.min(100, 55 + yearFactor * 35),
+  };
+}
 
 export default function Dashboard2() {
-    const [selectedMap, setSelectedMap] = useState("transport"); // default map
+  const [selectedMap, setSelectedMap] = useState("schools"); // ✅ Default to "schools"
+  const [year, setYear] = useState(2025);
+  const [metrics, setMetrics] = useState({
+    housing: 0,
+    schools: 0,
+    transport: 0,
+    services: 0,
+  });
+   const [state, setState] = useState("Victoria");
+  const [suburb, setSuburb] = useState("Burwood");
+  const navigate = useNavigate();
 
+  // 🔥 Recalculate metrics whenever year changes
+  useEffect(() => {
+ const newMetrics = getRandomMetrics();
+  setMetrics(newMetrics);
+  }, [suburb]);
+
+  useEffect(() => {
+    const newMetrics = calculateMetrics(year, permitsData, schoolsData, transportData);
+    setMetrics(newMetrics);
+  }, [ year]);
+
+    // Suburbs list for current state
+  const suburbsList = suburbsData[state] || [];
+  
+  const getRandomMetrics = () => {
+    return {
+      housing: Math.floor(Math.random() * 40) + 40, // 40-80%
+      schools: Math.floor(Math.random() * 40) + 50, // 50-90%
+      transport: Math.floor(Math.random() * 50) + 30, // 30-80%
+      services: Math.floor(Math.random() * 50) + 30, // 30-80%
+    };
+  };
+
+
+  // 🔥 Decide which map to render
   const renderMap = () => {
     switch (selectedMap) {
-      case "transport":
-        return <TransportMap />;
       case "schools":
-        return <SchoolMap />;
+        return <SchoolMap year={year} schoolsData={schoolsData} />;
+      case "transport":
+        return <TransportMap year={year} transportData={transportData} />;
       case "housing":
-        return <HousingHeatMap />;
+        return <HousingHeatMap year={year} permitsData={permitsData} />;
       case "services":
-       return <ServicesHeatMap />;
+        return <ServicesHeatMap year={year} />;
       default:
-        return <TransportMap />;
+        return <SchoolMap year={year} schoolsData={schoolsData} />;
     }
   };
 
-  const metrics = [
-    { title: "🏠 Housing", now: 65, color: "success", key: "housing" },
-    { title: "🏫 Schools", now: 92, color: "warning", key: "schools" },
-    { title: "🚌 Transport", now: 45, color: "info", key: "transport" },
-    { title: "🏥 Services", now: 78, color: "danger", key: "services" },
+  // 🔥 Convert metrics object into array for easy rendering
+  const metricsArray = [
+    { title: "🏠 Housing", value: metrics.housing, color: "success", key: "housing" },
+    { title: "🏫 Schools", value: metrics.schools, color: "warning", key: "schools" },
+    { title: "🚌 Transport", value: metrics.transport, color: "info", key: "transport" },
+    { title: "🏥 Services", value: metrics.services, color: "danger", key: "services" },
   ];
 
   return (
     <Container fluid className="p-4 bg-light">
       {/* HEADER */}
-      <Navbar bg="white" className="shadow-sm rounded p-3 mb-4">
+       {/* HEADER */}
+      <Navbar bg="white" className="shadow-sm rounded p-1 mb-1">
         <Container className="d-flex justify-content-between align-items-center">
-          <div>
-            <h1 className="fw-bold text-primary mb-0">CoBuild</h1>
-            <small className="text-muted">Building Communities Together</small>
+          <div className="d-flex align-items-center gap-2">
+  <img 
+    src={require("../assets/image.png")}
+    alt="CoBuild Logo" 
+    style={{ height: "250px" }} 
+  />
+</div>
+          <div className="d-flex gap-2">
+            {/* State Dropdown */}
+            <Form.Select
+              style={{ maxWidth: "200px" }}
+              value={state}
+              onChange={(e) => {
+                setState(e.target.value);
+                setSuburb(suburbsData[e.target.value][0]); // auto-select first suburb
+              }}
+            >
+              {Object.keys(suburbsData).map((stateName, i) => (
+                <option key={i} value={stateName}>
+                  {stateName}
+                </option>
+              ))}
+            </Form.Select>
+
+            {/* Suburb Dropdown */}
+            <Form.Select
+              style={{ maxWidth: "200px" }}
+              value={suburb}
+              onChange={(e) => setSuburb(e.target.value)}
+            >
+              {suburbsList.map((suburbName, i) => (
+                <option key={i} value={suburbName}>
+                  {suburbName}
+                </option>
+              ))}
+            </Form.Select>
           </div>
-          <Form.Select style={{ maxWidth: "250px" }} defaultValue="vic">
-            <option value="nsw">New South Wales</option>
-            <option value="vic">Victoria</option>
-            <option value="qld">Queensland</option>
-            <option value="wa">Western Australia</option>
-            <option value="sa">South Australia</option>
-            <option value="tas">Tasmania</option>
-            <option value="act">Australian Capital Territory</option>
-            <option value="nt">Northern Territory</option>
-          </Form.Select>
         </Container>
       </Navbar>
 
@@ -72,10 +156,20 @@ export default function Dashboard2() {
           {/* MAP SECTION */}
           <Card className="shadow-sm mb-4">
             <Card.Body>
-              <Card.Title>🗺️ Council Area Capacity Map</Card.Title>
-              <YearSelector/>
-            
-              
+              <Card.Title>🗺️ {suburb} Council Area Capacity Map</Card.Title>
+              <div className="my-3">
+                <Form.Label>📅 Data Year Selection</Form.Label>
+                <Form.Range
+                  min="2025"
+                  max="2050"
+                  value={year}
+                  onChange={(e) => setYear(Number(e.target.value))}
+                />
+                <small className="text-muted">
+                  Current Year: {year} | Showing: Projected Data
+                </small>
+              </div>
+
               <div
                 style={{
                   height: "100%",
@@ -90,17 +184,14 @@ export default function Dashboard2() {
               </div>
               <div className="d-flex justify-content-around mt-3">
                 <span className="badge bg-success">Low Demand</span>
-                <span className="badge bg-warning text-dark">
-                  Moderate Demand
-                </span>
+                <span className="badge bg-warning text-dark">Moderate Demand</span>
                 <span className="badge bg-danger">High Demand</span>
               </div>
             </Card.Body>
           </Card>
 
           {/* PLANNING CALCULATOR */}
-          <DevelopmentImpactCalculator/>
-          
+          <DevelopmentImpactCalculator />
         </Col>
 
         {/* RIGHT SIDE: METRICS PANEL */}
@@ -108,12 +199,10 @@ export default function Dashboard2() {
           <Card className="shadow-sm mb-4">
             <Card.Body>
               <Card.Title>📊 Live Capacity Metrics</Card.Title>
-              {metrics.map((m, i) => (
+              {metricsArray.map((m, i) => (
                 <Card
                   key={i}
-                  className={`mb-3 shadow-sm ${
-                    selectedMap === m.key ? "border-primary" : ""
-                  }`}
+                  className={`mb-3 shadow-sm ${selectedMap === m.key ? "border-primary" : ""}`}
                   style={{ cursor: "pointer" }}
                   onClick={() => setSelectedMap(m.key)}
                 >
@@ -121,8 +210,8 @@ export default function Dashboard2() {
                     <Card.Subtitle>{m.title}</Card.Subtitle>
                     <ProgressBar
                       className="mt-2"
-                      now={m.now}
-                      label={`${m.now}%`}
+                      now={m.value}
+                      label={`${m.value.toFixed(0)}%`}
                       variant={m.color}
                     />
                   </Card.Body>
@@ -134,42 +223,7 @@ export default function Dashboard2() {
       </Row>
 
       {/* SENTIMENT SECTION */}
-      <CommunitySentiment />
-      {/* <Card className="shadow-sm mb-4">
-        <Card.Body>
-          <Card.Title>👥 Community Sentiment Analysis</Card.Title>
-          <Row className="mt-3">
-            <Col md={3} className="text-center">
-              <Card className="p-3">
-                <h5>Satisfaction Score</h5>
-                <h1 className="fw-bold text-primary">78%</h1>
-                <small>123 responses</small>
-              </Card>
-            </Col>
-            <Col md={9}>
-              <Card className="p-3">
-                <h5>Recent Feedback</h5>
-                <ListGroup className="mt-2">
-                  <ListGroup.Item>
-                    "We need more green spaces in the community."
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    "Public transport has improved this year."
-                  </ListGroup.Item>
-                </ListGroup>
-                <div className="mt-3 d-flex gap-2">
-                  <Button size="sm" variant="primary">
-                    View All Feedback
-                  </Button>
-                  <Button size="sm" variant="secondary">
-                    Submit New Feedback
-                  </Button>
-                </div>
-              </Card>
-            </Col>
-          </Row>
-        </Card.Body>
-      </Card> */}
+      <SentimentAnalysis />
 
       {/* FEASIBILITY SECTION */}
       <Card className="shadow-sm mb-4">
@@ -200,13 +254,13 @@ export default function Dashboard2() {
             </Col>
           </Row>
           <div className="text-center mt-4">
-            <Button variant="primary" className="me-2">
+            <Button
+              variant="primary"
+              className="me-2"
+              onClick={() => navigate("/report")}
+            >
               📄 Generate Report
             </Button>
-            <Button variant="success" className="me-2">
-              📊 Export Data
-            </Button>
-            <Button variant="secondary">📤 Share</Button>
           </div>
         </Card.Body>
       </Card>
