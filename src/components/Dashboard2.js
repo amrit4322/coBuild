@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import {
   Container,
   Row,
@@ -11,8 +11,38 @@ import {
   ListGroup,
 } from "react-bootstrap";
 import TransportMap from "./TransportMap";
+import SchoolMap from "./SchoolMap";
+import DevelopmentImpactCalculator from "./DevelopmentImpactCalculator";
+import CommunitySentiment from "./CommunitySentiment";
+import YearSelector from "./YearSelector";
+import HousingHeatMap from "./HeatMapHousing";
+import ServicesHeatMap from "./HeatMapServices";
 
 export default function Dashboard2() {
+    const [selectedMap, setSelectedMap] = useState("transport"); // default map
+
+  const renderMap = () => {
+    switch (selectedMap) {
+      case "transport":
+        return <TransportMap />;
+      case "schools":
+        return <SchoolMap />;
+      case "housing":
+        return <HousingHeatMap />;
+      case "services":
+       return <ServicesHeatMap />;
+      default:
+        return <TransportMap />;
+    }
+  };
+
+  const metrics = [
+    { title: "🏠 Housing", now: 65, color: "success", key: "housing" },
+    { title: "🏫 Schools", now: 92, color: "warning", key: "schools" },
+    { title: "🚌 Transport", now: 45, color: "info", key: "transport" },
+    { title: "🏥 Services", now: 78, color: "danger", key: "services" },
+  ];
+
   return (
     <Container fluid className="p-4 bg-light">
       {/* HEADER */}
@@ -22,10 +52,15 @@ export default function Dashboard2() {
             <h1 className="fw-bold text-primary mb-0">CoBuild</h1>
             <small className="text-muted">Building Communities Together</small>
           </div>
-          <Form.Select style={{ maxWidth: "250px" }}>
-            <option value="yarra">City of Yarra</option>
-            <option value="moreland">City of Moreland</option>
-            <option value="portphillip">City of Port Phillip</option>
+          <Form.Select style={{ maxWidth: "250px" }} defaultValue="vic">
+            <option value="nsw">New South Wales</option>
+            <option value="vic">Victoria</option>
+            <option value="qld">Queensland</option>
+            <option value="wa">Western Australia</option>
+            <option value="sa">South Australia</option>
+            <option value="tas">Tasmania</option>
+            <option value="act">Australian Capital Territory</option>
+            <option value="nt">Northern Territory</option>
           </Form.Select>
         </Container>
       </Navbar>
@@ -38,13 +73,8 @@ export default function Dashboard2() {
           <Card className="shadow-sm mb-4">
             <Card.Body>
               <Card.Title>🗺️ Council Area Capacity Map</Card.Title>
-              <div className="my-3">
-                <Form.Label>📅 Data Year Selection</Form.Label>
-                <Form.Range min="2024" max="2035" defaultValue="2025" />
-                <small className="text-muted">
-                  Current Year: 2025 | Showing: Current Data
-                </small>
-              </div>
+              <YearSelector/>
+            
               
               <div
                 style={{
@@ -56,7 +86,7 @@ export default function Dashboard2() {
                   fontWeight: "bold",
                 }}
               >
-                <TransportMap/>
+                {renderMap()}
               </div>
               <div className="d-flex justify-content-around mt-3">
                 <span className="badge bg-success">Low Demand</span>
@@ -69,46 +99,8 @@ export default function Dashboard2() {
           </Card>
 
           {/* PLANNING CALCULATOR */}
-          <Card className="shadow-sm mb-4">
-            <Card.Body>
-              <Card.Title>🧮 Development Impact Calculator</Card.Title>
-              <Row className="gy-3 mt-3">
-                <Col md={5}>
-                  <Form.Group>
-                    <Form.Label>Number of New Houses</Form.Label>
-                    <Form.Control type="number" defaultValue={500} />
-                  </Form.Group>
-                </Col>
-                <Col md={5}>
-                  <Form.Group>
-                    <Form.Label>Target Year</Form.Label>
-                    <Form.Select>
-                      <option>2026</option>
-                      <option>2027</option>
-                      <option>2028</option>
-                      <option>2029</option>
-                      <option>2030</option>
-                    </Form.Select>
-                  </Form.Group>
-                </Col>
-                <Col md={2} className="d-flex align-items-end">
-                  <Button className="w-100" variant="primary">
-                    Calculate
-                  </Button>
-                </Col>
-              </Row>
-              <Card className="mt-4 p-3 bg-light">
-                <h5>📋 Infrastructure Requirements:</h5>
-                <ListGroup className="mt-2">
-                  <ListGroup.Item>Example requirement</ListGroup.Item>
-                  <ListGroup.Item>Another requirement</ListGroup.Item>
-                </ListGroup>
-                <div className="alert alert-danger mt-3 mb-0">
-                  ⚠️ Alert: Example alert message
-                </div>
-              </Card>
-            </Card.Body>
-          </Card>
+          <DevelopmentImpactCalculator/>
+          
         </Col>
 
         {/* RIGHT SIDE: METRICS PANEL */}
@@ -116,13 +108,15 @@ export default function Dashboard2() {
           <Card className="shadow-sm mb-4">
             <Card.Body>
               <Card.Title>📊 Live Capacity Metrics</Card.Title>
-              {[
-                { title: "🏠 Housing", now: 65, color: "success" },
-                { title: "🏫 Schools", now: 92, color: "warning" },
-                { title: "🚌 Transport", now: 45, color: "info" },
-                { title: "🏥 Services", now: 78, color: "danger" },
-              ].map((m, i) => (
-                <Card key={i} className="mb-3 shadow-sm">
+              {metrics.map((m, i) => (
+                <Card
+                  key={i}
+                  className={`mb-3 shadow-sm ${
+                    selectedMap === m.key ? "border-primary" : ""
+                  }`}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setSelectedMap(m.key)}
+                >
                   <Card.Body>
                     <Card.Subtitle>{m.title}</Card.Subtitle>
                     <ProgressBar
@@ -140,7 +134,8 @@ export default function Dashboard2() {
       </Row>
 
       {/* SENTIMENT SECTION */}
-      <Card className="shadow-sm mb-4">
+      <CommunitySentiment />
+      {/* <Card className="shadow-sm mb-4">
         <Card.Body>
           <Card.Title>👥 Community Sentiment Analysis</Card.Title>
           <Row className="mt-3">
@@ -174,7 +169,7 @@ export default function Dashboard2() {
             </Col>
           </Row>
         </Card.Body>
-      </Card>
+      </Card> */}
 
       {/* FEASIBILITY SECTION */}
       <Card className="shadow-sm mb-4">

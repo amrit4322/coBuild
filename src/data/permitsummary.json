@@ -1,0 +1,822 @@
+[
+    {
+        "lga": "Melbourne ",
+        "permits_count": 1404,
+        "new_dwellings": 3032.0,
+        "total_cost": 3196913397,
+        "avg_cost": 2251347.4626760562,
+        "projected_population_increase": 7883,
+        "projected_primary_students": 946,
+        "projected_secondary_students": 788
+    },
+    {
+        "lga": "Wyndham ",
+        "permits_count": 3295,
+        "new_dwellings": 2740.0,
+        "total_cost": 2228013839,
+        "avg_cost": 665873.8311416617,
+        "projected_population_increase": 7124,
+        "projected_primary_students": 855,
+        "projected_secondary_students": 712
+    },
+    {
+        "lga": "Melton ",
+        "permits_count": 3143,
+        "new_dwellings": 2559.0,
+        "total_cost": 1877355406,
+        "avg_cost": 583573.3310537768,
+        "projected_population_increase": 6653,
+        "projected_primary_students": 798,
+        "projected_secondary_students": 665
+    },
+    {
+        "lga": "Hume ",
+        "permits_count": 2960,
+        "new_dwellings": 2273.0,
+        "total_cost": 1578846039,
+        "avg_cost": 526282.013,
+        "projected_population_increase": 5910,
+        "projected_primary_students": 709,
+        "projected_secondary_students": 591
+    },
+    {
+        "lga": "Greater Geelong ",
+        "permits_count": 3148,
+        "new_dwellings": 2245.0,
+        "total_cost": 1660842159,
+        "avg_cost": 517557.5440947335,
+        "projected_population_increase": 5837,
+        "projected_primary_students": 700,
+        "projected_secondary_students": 584
+    },
+    {
+        "lga": "Casey ",
+        "permits_count": 2961,
+        "new_dwellings": 2165.0,
+        "total_cost": 1442886706,
+        "avg_cost": 480481.7535797536,
+        "projected_population_increase": 5629,
+        "projected_primary_students": 675,
+        "projected_secondary_students": 563
+    },
+    {
+        "lga": "Port Philip ",
+        "permits_count": 638,
+        "new_dwellings": 1879.0,
+        "total_cost": 911117359,
+        "avg_cost": 1419185.9174454829,
+        "projected_population_increase": 4885,
+        "projected_primary_students": 586,
+        "projected_secondary_students": 488
+    },
+    {
+        "lga": "Whittlesea ",
+        "permits_count": 2410,
+        "new_dwellings": 1799.0,
+        "total_cost": 1040871234,
+        "avg_cost": 421234.8174828005,
+        "projected_population_increase": 4677,
+        "projected_primary_students": 561,
+        "projected_secondary_students": 468
+    },
+    {
+        "lga": "Merri-bek",
+        "permits_count": 1117,
+        "new_dwellings": 1211.0,
+        "total_cost": 681504510,
+        "avg_cost": 605243.7921847247,
+        "projected_population_increase": 3149,
+        "projected_primary_students": 378,
+        "projected_secondary_students": 315
+    },
+    {
+        "lga": "Greater Dandenong ",
+        "permits_count": 670,
+        "new_dwellings": 801.0,
+        "total_cost": 413923147,
+        "avg_cost": 615957.0639880953,
+        "projected_population_increase": 2083,
+        "projected_primary_students": 250,
+        "projected_secondary_students": 208
+    },
+    {
+        "lga": "Kingston ",
+        "permits_count": 948,
+        "new_dwellings": 789.0,
+        "total_cost": 448964123,
+        "avg_cost": 472593.8136842105,
+        "projected_population_increase": 2051,
+        "projected_primary_students": 246,
+        "projected_secondary_students": 205
+    },
+    {
+        "lga": "Cardinia ",
+        "permits_count": 1251,
+        "new_dwellings": 760.0,
+        "total_cost": 576068423,
+        "avg_cost": 455030.3499210111,
+        "projected_population_increase": 1976,
+        "projected_primary_students": 237,
+        "projected_secondary_students": 198
+    },
+    {
+        "lga": "Darebin ",
+        "permits_count": 983,
+        "new_dwellings": 702.0,
+        "total_cost": 545398224,
+        "avg_cost": 550351.3864783047,
+        "projected_population_increase": 1825,
+        "projected_primary_students": 219,
+        "projected_secondary_students": 182
+    },
+    {
+        "lga": "Yarra ",
+        "permits_count": 569,
+        "new_dwellings": 686.0,
+        "total_cost": 725128486,
+        "avg_cost": 1263290.0452961673,
+        "projected_population_increase": 1784,
+        "projected_primary_students": 214,
+        "projected_secondary_students": 178
+    },
+    {
+        "lga": "Knox ",
+        "permits_count": 891,
+        "new_dwellings": 646.0,
+        "total_cost": 469075276,
+        "avg_cost": 522937.8773690078,
+        "projected_population_increase": 1680,
+        "projected_primary_students": 202,
+        "projected_secondary_students": 168
+    },
+    {
+        "lga": "Bayside ",
+        "permits_count": 907,
+        "new_dwellings": 633.0,
+        "total_cost": 719954569,
+        "avg_cost": 790290.4160263446,
+        "projected_population_increase": 1646,
+        "projected_primary_students": 198,
+        "projected_secondary_students": 165
+    },
+    {
+        "lga": "Boroondara ",
+        "permits_count": 1561,
+        "new_dwellings": 620.0,
+        "total_cost": 953360037,
+        "avg_cost": 608398.2367581365,
+        "projected_population_increase": 1612,
+        "projected_primary_students": 193,
+        "projected_secondary_students": 161
+    },
+    {
+        "lga": "Mitchell ",
+        "permits_count": 763,
+        "new_dwellings": 580.0,
+        "total_cost": 267225223,
+        "avg_cost": 335288.8619824341,
+        "projected_population_increase": 1508,
+        "projected_primary_students": 181,
+        "projected_secondary_students": 151
+    },
+    {
+        "lga": "Monash ",
+        "permits_count": 1496,
+        "new_dwellings": 547.0,
+        "total_cost": 661882827,
+        "avg_cost": 440081.6668882979,
+        "projected_population_increase": 1422,
+        "projected_primary_students": 171,
+        "projected_secondary_students": 142
+    },
+    {
+        "lga": "Brimbank ",
+        "permits_count": 785,
+        "new_dwellings": 500.0,
+        "total_cost": 866625987,
+        "avg_cost": 1096994.9202531646,
+        "projected_population_increase": 1300,
+        "projected_primary_students": 156,
+        "projected_secondary_students": 130
+    },
+    {
+        "lga": "Whitehorse ",
+        "permits_count": 1281,
+        "new_dwellings": 471.0,
+        "total_cost": 526815757,
+        "avg_cost": 409973.3517509727,
+        "projected_population_increase": 1225,
+        "projected_primary_students": 147,
+        "projected_secondary_students": 122
+    },
+    {
+        "lga": "Glen Eira ",
+        "permits_count": 920,
+        "new_dwellings": 466.0,
+        "total_cost": 553069561,
+        "avg_cost": 595980.130387931,
+        "projected_population_increase": 1212,
+        "projected_primary_students": 145,
+        "projected_secondary_students": 121
+    },
+    {
+        "lga": "Greater Bendigo ",
+        "permits_count": 1114,
+        "new_dwellings": 463.0,
+        "total_cost": 398426565,
+        "avg_cost": 352589.8805309734,
+        "projected_population_increase": 1204,
+        "projected_primary_students": 144,
+        "projected_secondary_students": 120
+    },
+    {
+        "lga": "Stonnington ",
+        "permits_count": 897,
+        "new_dwellings": 461.0,
+        "total_cost": 1058046826,
+        "avg_cost": 1171701.911406423,
+        "projected_population_increase": 1199,
+        "projected_primary_students": 144,
+        "projected_secondary_students": 120
+    },
+    {
+        "lga": "Mornington ",
+        "permits_count": 1830,
+        "new_dwellings": 431.0,
+        "total_cost": 709516226,
+        "avg_cost": 386026.2383025027,
+        "projected_population_increase": 1121,
+        "projected_primary_students": 135,
+        "projected_secondary_students": 112
+    },
+    {
+        "lga": "Ballarat ",
+        "permits_count": 1024,
+        "new_dwellings": 417.0,
+        "total_cost": 521792314,
+        "avg_cost": 503660.5347490347,
+        "projected_population_increase": 1084,
+        "projected_primary_students": 130,
+        "projected_secondary_students": 108
+    },
+    {
+        "lga": "Baw Baw ",
+        "permits_count": 757,
+        "new_dwellings": 412.0,
+        "total_cost": 218963182,
+        "avg_cost": 288109.45,
+        "projected_population_increase": 1071,
+        "projected_primary_students": 129,
+        "projected_secondary_students": 107
+    },
+    {
+        "lga": "East Gippsland ",
+        "permits_count": 567,
+        "new_dwellings": 376.0,
+        "total_cost": 164159671,
+        "avg_cost": 283522.7478411053,
+        "projected_population_increase": 978,
+        "projected_primary_students": 117,
+        "projected_secondary_students": 98
+    },
+    {
+        "lga": "Banyule ",
+        "permits_count": 849,
+        "new_dwellings": 375.0,
+        "total_cost": 363390041,
+        "avg_cost": 427517.6952941177,
+        "projected_population_increase": 975,
+        "projected_primary_students": 117,
+        "projected_secondary_students": 98
+    },
+    {
+        "lga": "Yarra Ranges ",
+        "permits_count": 939,
+        "new_dwellings": 325.0,
+        "total_cost": 266452679,
+        "avg_cost": 283460.2968085106,
+        "projected_population_increase": 845,
+        "projected_primary_students": 101,
+        "projected_secondary_students": 84
+    },
+    {
+        "lga": "Manningham ",
+        "permits_count": 718,
+        "new_dwellings": 324.0,
+        "total_cost": 414945543,
+        "avg_cost": 571550.3347107437,
+        "projected_population_increase": 842,
+        "projected_primary_students": 101,
+        "projected_secondary_students": 84
+    },
+    {
+        "lga": "Maroondah ",
+        "permits_count": 573,
+        "new_dwellings": 305.0,
+        "total_cost": 195133839,
+        "avg_cost": 337601.7975778547,
+        "projected_population_increase": 793,
+        "projected_primary_students": 95,
+        "projected_secondary_students": 79
+    },
+    {
+        "lga": "Moonee Valley ",
+        "permits_count": 851,
+        "new_dwellings": 303.0,
+        "total_cost": 403853030,
+        "avg_cost": 471790.9228971963,
+        "projected_population_increase": 788,
+        "projected_primary_students": 95,
+        "projected_secondary_students": 79
+    },
+    {
+        "lga": "Wodonga ",
+        "permits_count": 514,
+        "new_dwellings": 293.0,
+        "total_cost": 210474784,
+        "avg_cost": 382681.4254545455,
+        "projected_population_increase": 762,
+        "projected_primary_students": 91,
+        "projected_secondary_students": 76
+    },
+    {
+        "lga": "Greater Shepparton ",
+        "permits_count": 670,
+        "new_dwellings": 289.0,
+        "total_cost": 288568561,
+        "avg_cost": 426876.5695266272,
+        "projected_population_increase": 751,
+        "projected_primary_students": 90,
+        "projected_secondary_students": 75
+    },
+    {
+        "lga": "Hobsons Bay ",
+        "permits_count": 609,
+        "new_dwellings": 288.0,
+        "total_cost": 253333925,
+        "avg_cost": 413269.0456769984,
+        "projected_population_increase": 749,
+        "projected_primary_students": 90,
+        "projected_secondary_students": 75
+    },
+    {
+        "lga": "Frankston ",
+        "permits_count": 732,
+        "new_dwellings": 283.0,
+        "total_cost": 262938000,
+        "avg_cost": 355802.4357239513,
+        "projected_population_increase": 736,
+        "projected_primary_students": 88,
+        "projected_secondary_students": 74
+    },
+    {
+        "lga": "Maribyrnong ",
+        "permits_count": 654,
+        "new_dwellings": 217.0,
+        "total_cost": 851025428,
+        "avg_cost": 1297294.8597560977,
+        "projected_population_increase": 564,
+        "projected_primary_students": 68,
+        "projected_secondary_students": 56
+    },
+    {
+        "lga": "Bass Coast ",
+        "permits_count": 638,
+        "new_dwellings": 217.0,
+        "total_cost": 187975846,
+        "avg_cost": 293712.259375,
+        "projected_population_increase": 564,
+        "projected_primary_students": 68,
+        "projected_secondary_students": 56
+    },
+    {
+        "lga": "Latrobe ",
+        "permits_count": 720,
+        "new_dwellings": 210.0,
+        "total_cost": 199669576,
+        "avg_cost": 275786.7071823204,
+        "projected_population_increase": 546,
+        "projected_primary_students": 66,
+        "projected_secondary_students": 55
+    },
+    {
+        "lga": "Moorabool ",
+        "permits_count": 411,
+        "new_dwellings": 200.0,
+        "total_cost": 133231676,
+        "avg_cost": 319500.4220623501,
+        "projected_population_increase": 520,
+        "projected_primary_students": 62,
+        "projected_secondary_students": 52
+    },
+    {
+        "lga": "Macedon Ranges ",
+        "permits_count": 563,
+        "new_dwellings": 179.0,
+        "total_cost": 158896507,
+        "avg_cost": 268860.4179357022,
+        "projected_population_increase": 465,
+        "projected_primary_students": 56,
+        "projected_secondary_students": 46
+    },
+    {
+        "lga": "Moira ",
+        "permits_count": 401,
+        "new_dwellings": 164.0,
+        "total_cost": 115318733,
+        "avg_cost": 284737.612345679,
+        "projected_population_increase": 426,
+        "projected_primary_students": 51,
+        "projected_secondary_students": 43
+    },
+    {
+        "lga": "Warrnambool ",
+        "permits_count": 315,
+        "new_dwellings": 144.0,
+        "total_cost": 150022274,
+        "avg_cost": 467359.1090342679,
+        "projected_population_increase": 374,
+        "projected_primary_students": 45,
+        "projected_secondary_students": 37
+    },
+    {
+        "lga": "Colac-Otway ",
+        "permits_count": 260,
+        "new_dwellings": 112.0,
+        "total_cost": 93681823,
+        "avg_cost": 358934.1877394636,
+        "projected_population_increase": 291,
+        "projected_primary_students": 35,
+        "projected_secondary_students": 29
+    },
+    {
+        "lga": "Hepburn ",
+        "permits_count": 227,
+        "new_dwellings": 109.0,
+        "total_cost": 98625019,
+        "avg_cost": 423283.3433476395,
+        "projected_population_increase": 283,
+        "projected_primary_students": 34,
+        "projected_secondary_students": 28
+    },
+    {
+        "lga": "Surf Coast ",
+        "permits_count": 466,
+        "new_dwellings": 107.0,
+        "total_cost": 168474525,
+        "avg_cost": 357695.3821656051,
+        "projected_population_increase": 278,
+        "projected_primary_students": 33,
+        "projected_secondary_students": 28
+    },
+    {
+        "lga": "Wangaratta ",
+        "permits_count": 218,
+        "new_dwellings": 107.0,
+        "total_cost": 74208969,
+        "avg_cost": 338853.7397260274,
+        "projected_population_increase": 278,
+        "projected_primary_students": 33,
+        "projected_secondary_students": 28
+    },
+    {
+        "lga": "Wellington ",
+        "permits_count": 447,
+        "new_dwellings": 103.0,
+        "total_cost": 75005349,
+        "avg_cost": 167422.6540178571,
+        "projected_population_increase": 268,
+        "projected_primary_students": 32,
+        "projected_secondary_students": 27
+    },
+    {
+        "lga": "Campaspe ",
+        "permits_count": 398,
+        "new_dwellings": 99.0,
+        "total_cost": 110603108,
+        "avg_cost": 274449.3995037221,
+        "projected_population_increase": 257,
+        "projected_primary_students": 31,
+        "projected_secondary_students": 26
+    },
+    {
+        "lga": "Golden Plains ",
+        "permits_count": 324,
+        "new_dwellings": 96.0,
+        "total_cost": 79189695,
+        "avg_cost": 237094.8952095808,
+        "projected_population_increase": 250,
+        "projected_primary_students": 30,
+        "projected_secondary_students": 25
+    },
+    {
+        "lga": "Mildura ",
+        "permits_count": 497,
+        "new_dwellings": 83.0,
+        "total_cost": 155944892,
+        "avg_cost": 313142.3534136546,
+        "projected_population_increase": 216,
+        "projected_primary_students": 26,
+        "projected_secondary_students": 22
+    },
+    {
+        "lga": "South Gippsland ",
+        "permits_count": 342,
+        "new_dwellings": 79.0,
+        "total_cost": 66920230,
+        "avg_cost": 195102.7113702624,
+        "projected_population_increase": 205,
+        "projected_primary_students": 25,
+        "projected_secondary_students": 20
+    },
+    {
+        "lga": "Benalla ",
+        "permits_count": 190,
+        "new_dwellings": 74.0,
+        "total_cost": 49173758,
+        "avg_cost": 254786.310880829,
+        "projected_population_increase": 192,
+        "projected_primary_students": 23,
+        "projected_secondary_students": 19
+    },
+    {
+        "lga": "Mount Alexander ",
+        "permits_count": 243,
+        "new_dwellings": 66.0,
+        "total_cost": 65870435,
+        "avg_cost": 262432.0119521912,
+        "projected_population_increase": 172,
+        "projected_primary_students": 21,
+        "projected_secondary_students": 17
+    },
+    {
+        "lga": "Swan Hill ",
+        "permits_count": 175,
+        "new_dwellings": 53.0,
+        "total_cost": 57032293,
+        "avg_cost": 325898.8171428571,
+        "projected_population_increase": 138,
+        "projected_primary_students": 17,
+        "projected_secondary_students": 14
+    },
+    {
+        "lga": "Nillumbik ",
+        "permits_count": 316,
+        "new_dwellings": 50.0,
+        "total_cost": 92413709,
+        "avg_cost": 289698.1473354232,
+        "projected_population_increase": 130,
+        "projected_primary_students": 16,
+        "projected_secondary_students": 13
+    },
+    {
+        "lga": "Indigo ",
+        "permits_count": 186,
+        "new_dwellings": 49.0,
+        "total_cost": 38608378,
+        "avg_cost": 206461.9144385027,
+        "projected_population_increase": 127,
+        "projected_primary_students": 15,
+        "projected_secondary_students": 13
+    },
+    {
+        "lga": "Strathbogie ",
+        "permits_count": 129,
+        "new_dwellings": 48.0,
+        "total_cost": 39953748,
+        "avg_cost": 307336.5230769231,
+        "projected_population_increase": 125,
+        "projected_primary_students": 15,
+        "projected_secondary_students": 12
+    },
+    {
+        "lga": "Alpine ",
+        "permits_count": 142,
+        "new_dwellings": 36.0,
+        "total_cost": 36696643,
+        "avg_cost": 258427.0633802817,
+        "projected_population_increase": 94,
+        "projected_primary_students": 11,
+        "projected_secondary_students": 9
+    },
+    {
+        "lga": "Moyne ",
+        "permits_count": 166,
+        "new_dwellings": 35.0,
+        "total_cost": 36372658,
+        "avg_cost": 216503.9166666667,
+        "projected_population_increase": 91,
+        "projected_primary_students": 11,
+        "projected_secondary_students": 9
+    },
+    {
+        "lga": "Mansfield ",
+        "permits_count": 151,
+        "new_dwellings": 35.0,
+        "total_cost": 37458685,
+        "avg_cost": 248070.761589404,
+        "projected_population_increase": 91,
+        "projected_primary_students": 11,
+        "projected_secondary_students": 9
+    },
+    {
+        "lga": "Murrindindi ",
+        "permits_count": 167,
+        "new_dwellings": 26.0,
+        "total_cost": 36482496,
+        "avg_cost": 218458.0598802395,
+        "projected_population_increase": 68,
+        "projected_primary_students": 8,
+        "projected_secondary_students": 7
+    },
+    {
+        "lga": "Glenelg ",
+        "permits_count": 174,
+        "new_dwellings": 25.0,
+        "total_cost": 39461401,
+        "avg_cost": 224212.5056818182,
+        "projected_population_increase": 65,
+        "projected_primary_students": 8,
+        "projected_secondary_students": 6
+    },
+    {
+        "lga": "Horsham ",
+        "permits_count": 149,
+        "new_dwellings": 25.0,
+        "total_cost": 29551322,
+        "avg_cost": 198331.0201342282,
+        "projected_population_increase": 65,
+        "projected_primary_students": 8,
+        "projected_secondary_students": 6
+    },
+    {
+        "lga": "Corangamite ",
+        "permits_count": 155,
+        "new_dwellings": 22.0,
+        "total_cost": 112046498,
+        "avg_cost": 722880.6322580645,
+        "projected_population_increase": 57,
+        "projected_primary_students": 7,
+        "projected_secondary_students": 6
+    },
+    {
+        "lga": "Southern Grampians",
+        "permits_count": 147,
+        "new_dwellings": 22.0,
+        "total_cost": 24204962,
+        "avg_cost": 162449.4093959731,
+        "projected_population_increase": 57,
+        "projected_primary_students": 7,
+        "projected_secondary_students": 6
+    },
+    {
+        "lga": "Loddon ",
+        "permits_count": 86,
+        "new_dwellings": 21.0,
+        "total_cost": 17770448,
+        "avg_cost": 204258.0229885057,
+        "projected_population_increase": 55,
+        "projected_primary_students": 7,
+        "projected_secondary_students": 6
+    },
+    {
+        "lga": "Northern Grampians ",
+        "permits_count": 85,
+        "new_dwellings": 21.0,
+        "total_cost": 31615030,
+        "avg_cost": 371941.5294117647,
+        "projected_population_increase": 55,
+        "projected_primary_students": 7,
+        "projected_secondary_students": 6
+    },
+    {
+        "lga": "Queenscliff (B)",
+        "permits_count": 73,
+        "new_dwellings": 21.0,
+        "total_cost": 35850527,
+        "avg_cost": 484466.5810810811,
+        "projected_population_increase": 55,
+        "projected_primary_students": 7,
+        "projected_secondary_students": 6
+    },
+    {
+        "lga": "Central Goldfields ",
+        "permits_count": 80,
+        "new_dwellings": 20.0,
+        "total_cost": 12933643,
+        "avg_cost": 157727.3536585366,
+        "projected_population_increase": 52,
+        "projected_primary_students": 6,
+        "projected_secondary_students": 5
+    },
+    {
+        "lga": "Ararat ",
+        "permits_count": 80,
+        "new_dwellings": 19.0,
+        "total_cost": 19307523,
+        "avg_cost": 241344.0375,
+        "projected_population_increase": 49,
+        "projected_primary_students": 6,
+        "projected_secondary_students": 5
+    },
+    {
+        "lga": "Yarriambiack ",
+        "permits_count": 64,
+        "new_dwellings": 18.0,
+        "total_cost": 13887238,
+        "avg_cost": 216988.09375,
+        "projected_population_increase": 47,
+        "projected_primary_students": 6,
+        "projected_secondary_students": 5
+    },
+    {
+        "lga": "Gannawarra ",
+        "permits_count": 86,
+        "new_dwellings": 15.0,
+        "total_cost": 15368635,
+        "avg_cost": 178705.0581395349,
+        "projected_population_increase": 39,
+        "projected_primary_students": 5,
+        "projected_secondary_students": 4
+    },
+    {
+        "lga": "Buloke ",
+        "permits_count": 77,
+        "new_dwellings": 14.0,
+        "total_cost": 16353033,
+        "avg_cost": 209654.2692307692,
+        "projected_population_increase": 36,
+        "projected_primary_students": 4,
+        "projected_secondary_students": 4
+    },
+    {
+        "lga": "Pyrenees ",
+        "permits_count": 62,
+        "new_dwellings": 13.0,
+        "total_cost": 10336824,
+        "avg_cost": 166722.9677419355,
+        "projected_population_increase": 34,
+        "projected_primary_students": 4,
+        "projected_secondary_students": 3
+    },
+    {
+        "lga": "Towong ",
+        "permits_count": 50,
+        "new_dwellings": 4.0,
+        "total_cost": 10317233,
+        "avg_cost": 206344.66,
+        "projected_population_increase": 10,
+        "projected_primary_students": 1,
+        "projected_secondary_students": 1
+    },
+    {
+        "lga": "Hindmarsh ",
+        "permits_count": 36,
+        "new_dwellings": 3.0,
+        "total_cost": 15723982,
+        "avg_cost": 436777.2777777778,
+        "projected_population_increase": 8,
+        "projected_primary_students": 1,
+        "projected_secondary_students": 1
+    },
+    {
+        "lga": "West Wimmera ",
+        "permits_count": 17,
+        "new_dwellings": 1.0,
+        "total_cost": 2690672,
+        "avg_cost": 149481.7777777778,
+        "projected_population_increase": 3,
+        "projected_primary_students": 0,
+        "projected_secondary_students": 0
+    },
+    {
+        "lga": "Mt Buller Alpine Resort",
+        "permits_count": 16,
+        "new_dwellings": 1.0,
+        "total_cost": 4591029,
+        "avg_cost": 286939.3125,
+        "projected_population_increase": 3,
+        "projected_primary_students": 0,
+        "projected_secondary_students": 0
+    },
+    {
+        "lga": "Mt Hotham Alpine Resort",
+        "permits_count": 2,
+        "new_dwellings": 0.0,
+        "total_cost": 172720,
+        "avg_cost": 86360.0,
+        "projected_population_increase": 0,
+        "projected_primary_students": 0,
+        "projected_secondary_students": 0
+    },
+    {
+        "lga": "Falls Creek Alpine Resort",
+        "permits_count": 0,
+        "new_dwellings": 0.0,
+        "total_cost": 3650000,
+        "avg_cost": 3650000.0,
+        "projected_population_increase": 0,
+        "projected_primary_students": 0,
+        "projected_secondary_students": 0
+    }
+]

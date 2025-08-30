@@ -35,9 +35,7 @@ export default function TransportMap() {
       center={center}
       zoom={10}
       style={{
-        height: "80%",
-        width: "80%",
-        borderRadius: "10px",
+      height: "500px", width: "100%", borderRadius: "10px"
       }}
     >
       {/* OpenStreetMap Tiles (Free!) */}

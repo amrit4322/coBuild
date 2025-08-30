@@ -11,6 +11,7 @@
     "bootstrap": "^5.3.8",
     "chart.js": "^4.5.0",
     "leaflet": "^1.9.4",
+    "leaflet.heat": "^0.2.0",
     "mapbox-gl": "^3.14.0",
     "material-symbols": "^0.34.1",
     "react": "^19.1.1",
