@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/amrit4322/coBuild.git/static/css/main.582b9ed6.css",
+    "main.js": "/amrit4322/coBuild.git/static/js/main.b33cdb3e.js",
+    "static/js/977.a867e45b.chunk.js": "/amrit4322/coBuild.git/static/js/977.a867e45b.chunk.js",
+    "static/js/455.84503d71.chunk.js": "/amrit4322/coBuild.git/static/js/455.84503d71.chunk.js",
+    "static/js/453.71be69eb.chunk.js": "/amrit4322/coBuild.git/static/js/453.71be69eb.chunk.js",
+    "static/media/material-symbols-rounded.woff2": "/amrit4322/coBuild.git/static/media/material-symbols-rounded.0483b975fd0ac25f323b.woff2",
+    "static/media/material-symbols-outlined.woff2": "/amrit4322/coBuild.git/static/media/material-symbols-outlined.55968e9e51644defc4f4.woff2",
+    "static/media/material-symbols-sharp.woff2": "/amrit4322/coBuild.git/static/media/material-symbols-sharp.818683d6bda01b35ed0e.woff2",
+    "static/media/logo.svg": "/amrit4322/coBuild.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/amrit4322/coBuild.git/index.html",
+    "main.582b9ed6.css.map": "/amrit4322/coBuild.git/static/css/main.582b9ed6.css.map",
+    "main.b33cdb3e.js.map": "/amrit4322/coBuild.git/static/js/main.b33cdb3e.js.map",
+    "977.a867e45b.chunk.js.map": "/amrit4322/coBuild.git/static/js/977.a867e45b.chunk.js.map",
+    "455.84503d71.chunk.js.map": "/amrit4322/coBuild.git/static/js/455.84503d71.chunk.js.map",
+    "453.71be69eb.chunk.js.map": "/amrit4322/coBuild.git/static/js/453.71be69eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.582b9ed6.css",
+    "static/js/main.b33cdb3e.js"
+  ]
+}
