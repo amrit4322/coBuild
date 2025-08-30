@@ -1,0 +1,152 @@
+{
+    "Melbourne": {
+        "lines": [
+            {
+                "feature_id": "melb_cbd:0",
+                "points": 420,
+                "start_lon": 144.963058,
+                "start_lat": -37.816572,
+                "end_lon": 144.952476,
+                "end_lat": -37.818271,
+                "length_km": 3.2,
+                "min_lon": 144.949,
+                "min_lat": -37.821,
+                "max_lon": 144.966,
+                "max_lat": -37.813,
+                "mode": "Train",
+                "short_name": "City Loop",
+                "long_name": "Parliament ↔ Flinders St ↔ Southern Cross",
+                "headsign": "Loop Inner",
+                "shape_id": "CBD_LOOP_01"
+            },
+            {
+                "feature_id": "melb_tram:11",
+                "points": 690,
+                "start_lon": 144.9719,
+                "start_lat": -37.8121,
+                "end_lon": 144.9464,
+                "end_lat": -37.8207,
+                "length_km": 6.7,
+                "min_lon": 144.944,
+                "min_lat": -37.824,
+                "max_lon": 144.973,
+                "max_lat": -37.808,
+                "mode": "Tram",
+                "short_name": "11",
+                "long_name": "Docklands ↔ Brunswick St",
+                "headsign": "Docklands",
+                "shape_id": "TRAM11_01"
+            }
+        ],
+        "stops": [
+            {
+                "stop_id": 20043,
+                "stop_name": "Southern Cross Station",
+                "mode": "Train",
+                "lon": 144.9520576,
+                "lat": -37.81838925
+            },
+            {
+                "stop_id": "melb_docklands_tram11",
+                "stop_name": "Docklands (Route 11)",
+                "mode": "Tram",
+                "lon": 144.9719,
+                "lat": -37.8121
+            }
+        ]
+    },
+    "Wyndham": {
+        "lines": [
+            {
+                "feature_id": "wynd_werribee:0",
+                "points": 1100,
+                "start_lon": 144.6594,
+                "start_lat": -37.9078,
+                "end_lon": 144.9631,
+                "end_lat": -37.8183,
+                "length_km": 32.4,
+                "min_lon": 144.652,
+                "min_lat": -37.913,
+                "max_lon": 144.971,
+                "max_lat": -37.812,
+                "mode": "Train",
+                "short_name": "Werribee",
+                "long_name": "Werribee ↔ City",
+                "headsign": "City via Newport",
+                "shape_id": "WERRIBEE_01"
+            }
+        ],
+        "stops": [
+            {
+                "stop_id": "wynd_werribee",
+                "stop_name": "Werribee Station",
+                "mode": "Train",
+                "lon": 144.6594,
+                "lat": -37.9078
+            },
+            {
+                "stop_id": "wynd_hoppers",
+                "stop_name": "Hoppers Crossing Station",
+                "mode": "Train",
+                "lon": 144.7002,
+                "lat": -37.8871
+            }
+        ]
+    },
+    "Casey": {
+        "lines": [
+            {
+                "feature_id": "casey_pakenham:0",
+                "points": 980,
+                "start_lon": 145.4816,
+                "start_lat": -38.0738,
+                "end_lon": 145.06,
+                "end_lat": -37.8763,
+                "length_km": 40.9,
+                "min_lon": 145.048,
+                "min_lat": -38.081,
+                "max_lon": 145.487,
+                "max_lat": -37.872,
+                "mode": "Train",
+                "short_name": "Pakenham",
+                "long_name": "Pakenham ↔ City",
+                "headsign": "City",
+                "shape_id": "PAKENHAM_01"
+            },
+            {
+                "feature_id": "casey_cran:1",
+                "points": 650,
+                "start_lon": 145.2832,
+                "start_lat": -38.1113,
+                "end_lon": 145.06,
+                "end_lat": -37.8763,
+                "length_km": 33.7,
+                "min_lon": 145.055,
+                "min_lat": -38.115,
+                "max_lon": 145.29,
+                "max_lat": -37.872,
+                "mode": "Train",
+                "short_name": "Cranbourne",
+                "long_name": "Cranbourne ↔ City",
+                "headsign": "City",
+                "shape_id": "CRANBOURNE_01"
+            }
+        ],
+        "stops": [
+            {
+                "stop_id": "casey_pakenham",
+                "stop_name": "Pakenham Station",
+                "mode": "Train",
+                "lon": 145.4816,
+                "lat": -38.0738
+            },
+            {
+                "stop_id": "casey_cranbourne",
+                "stop_name": "Cranbourne Station",
+                "mode": "Train",
+                "lon": 145.2832,
+                "lat": -38.1113
+            }
+        ]
+    }
+}

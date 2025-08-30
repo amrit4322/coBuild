@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReportPage from './components/Report';
 import DashboardPage from './components/DashboardAnalytics';
+import Dashboard2 from './components/Dashboard2';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/map" element={<MapDashboard />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard2 />} />
         <Route path="/report" element={<ReportPage />} />
         <Route path="analytics" element={<DashboardPage />} />
       </Routes>
