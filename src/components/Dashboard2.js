@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Nav } from "react-bootstrap";
 import {
   Container,
   Row,
@@ -11,7 +12,7 @@ import {
   ListGroup,
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 // COMPONENTS
 import TransportMap from "./TransportMap";
 import SchoolMap from "./SchoolMap";
@@ -24,6 +25,8 @@ import SentimentAnalysis from "./SentimentAnalysis";
 import permitsData from "../data/permitsummary.json";
 import schoolsData from "../data/schools.json";
 import transportData from "../data/transportfile.json";
+
+import { FaBuilding, FaChartLine, FaMapMarkedAlt, FaUsers, FaArrowRight, FaGlobe, FaRocket, FaLightbulb, FaShieldAlt } from 'react-icons/fa';
 import suburbsData from "../data/suburbs.json";
 
 // 🔥 Fake metric calculation (demo-ready)
@@ -51,24 +54,24 @@ export default function Dashboard2() {
     transport: 0,
     services: 0,
   });
-   const [state, setState] = useState("Victoria");
+  const [state, setState] = useState("Victoria");
   const [suburb, setSuburb] = useState("Burwood");
   const navigate = useNavigate();
 
   // 🔥 Recalculate metrics whenever year changes
   useEffect(() => {
- const newMetrics = getRandomMetrics();
-  setMetrics(newMetrics);
+    const newMetrics = getRandomMetrics();
+    setMetrics(newMetrics);
   }, [suburb]);
 
   useEffect(() => {
     const newMetrics = calculateMetrics(year, permitsData, schoolsData, transportData);
     setMetrics(newMetrics);
-  }, [ year]);
+  }, [year]);
 
-    // Suburbs list for current state
+  // Suburbs list for current state
   const suburbsList = suburbsData[state] || [];
-  
+
   const getRandomMetrics = () => {
     return {
       housing: Math.floor(Math.random() * 40) + 40, // 40-80%
@@ -104,19 +107,33 @@ export default function Dashboard2() {
   ];
 
   return (
-    <Container fluid className="p-4 bg-light">
+   <Container fluid className="p-4 bg-light" style={{ marginTop: "80px" }}>
       {/* HEADER */}
-       {/* HEADER */}
-      <Navbar bg="white" className="shadow-sm rounded p-1 mb-1">
-        <Container className="d-flex justify-content-between align-items-center">
-          <div className="d-flex align-items-center gap-2">
-  <img 
-    src={require("../assets/image.png")}
-    alt="CoBuild Logo" 
-    style={{ height: "250px" }} 
-  />
-</div>
-          <div className="d-flex gap-2">
+      {/* HEADER */}
+     <Navbar expand="lg" className="navbar-enhanced" bg="white" variant="light" fixed="top">
+        <Container>
+          <Navbar.Brand href="/" className="brand-enhanced">
+            <div className="brand-icon-wrapper">
+              <FaBuilding className="brand-icon" />
+            </div>
+            <span className="brand-text">CoBuild</span>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <Nav className="nav-enhanced">
+              <Nav.Link href="/" className="nav-link-enhanced">Home</Nav.Link>
+            
+             
+          
+            </Nav>
+           
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      {/* MAIN DASHBOARD */}
+      <Row>
+        <div className="d-flex gap-2">
             {/* State Dropdown */}
             <Form.Select
               style={{ maxWidth: "200px" }}
@@ -146,10 +163,7 @@ export default function Dashboard2() {
               ))}
             </Form.Select>
           </div>
-        </Container>
-      </Navbar>
-
-      {/* MAIN DASHBOARD */}
+      </Row>
       <Row>
         {/* LEFT SIDE: MAP + CALCULATOR */}
         <Col lg={8}>
@@ -182,11 +196,7 @@ export default function Dashboard2() {
               >
                 {renderMap()}
               </div>
-              <div className="d-flex justify-content-around mt-3">
-                <span className="badge bg-success">Low Demand</span>
-                <span className="badge bg-warning text-dark">Moderate Demand</span>
-                <span className="badge bg-danger">High Demand</span>
-              </div>
+              
             </Card.Body>
           </Card>
 

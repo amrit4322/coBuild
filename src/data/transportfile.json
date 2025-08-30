@@ -1,152 +1,565 @@
 {
-    "Melbourne": {
-        "lines": [
-            {
-                "feature_id": "melb_cbd:0",
-                "points": 420,
-                "start_lon": 144.963058,
-                "start_lat": -37.816572,
-                "end_lon": 144.952476,
-                "end_lat": -37.818271,
-                "length_km": 3.2,
-                "min_lon": 144.949,
-                "min_lat": -37.821,
-                "max_lon": 144.966,
-                "max_lat": -37.813,
-                "mode": "Train",
-                "short_name": "City Loop",
-                "long_name": "Parliament ↔ Flinders St ↔ Southern Cross",
-                "headsign": "Loop Inner",
-                "shape_id": "CBD_LOOP_01"
-            },
-            {
-                "feature_id": "melb_tram:11",
-                "points": 690,
-                "start_lon": 144.9719,
-                "start_lat": -37.8121,
-                "end_lon": 144.9464,
-                "end_lat": -37.8207,
-                "length_km": 6.7,
-                "min_lon": 144.944,
-                "min_lat": -37.824,
-                "max_lon": 144.973,
-                "max_lat": -37.808,
-                "mode": "Tram",
-                "short_name": "11",
-                "long_name": "Docklands ↔ Brunswick St",
-                "headsign": "Docklands",
-                "shape_id": "TRAM11_01"
-            }
-        ],
-        "stops": [
-            {
-                "stop_id": 20043,
-                "stop_name": "Southern Cross Station",
-                "mode": "Train",
-                "lon": 144.9520576,
-                "lat": -37.81838925
-            },
-            {
-                "stop_id": "melb_docklands_tram11",
-                "stop_name": "Docklands (Route 11)",
-                "mode": "Tram",
-                "lon": 144.9719,
-                "lat": -37.8121
-            }
-        ]
-    },
-    "Wyndham": {
-        "lines": [
-            {
-                "feature_id": "wynd_werribee:0",
-                "points": 1100,
-                "start_lon": 144.6594,
-                "start_lat": -37.9078,
-                "end_lon": 144.9631,
-                "end_lat": -37.8183,
-                "length_km": 32.4,
-                "min_lon": 144.652,
-                "min_lat": -37.913,
-                "max_lon": 144.971,
-                "max_lat": -37.812,
-                "mode": "Train",
-                "short_name": "Werribee",
-                "long_name": "Werribee ↔ City",
-                "headsign": "City via Newport",
-                "shape_id": "WERRIBEE_01"
-            }
-        ],
-        "stops": [
-            {
-                "stop_id": "wynd_werribee",
-                "stop_name": "Werribee Station",
-                "mode": "Train",
-                "lon": 144.6594,
-                "lat": -37.9078
-            },
-            {
-                "stop_id": "wynd_hoppers",
-                "stop_name": "Hoppers Crossing Station",
-                "mode": "Train",
-                "lon": 144.7002,
-                "lat": -37.8871
-            }
-        ]
-    },
-    "Casey": {
-        "lines": [
-            {
-                "feature_id": "casey_pakenham:0",
-                "points": 980,
-                "start_lon": 145.4816,
-                "start_lat": -38.0738,
-                "end_lon": 145.06,
-                "end_lat": -37.8763,
-                "length_km": 40.9,
-                "min_lon": 145.048,
-                "min_lat": -38.081,
-                "max_lon": 145.487,
-                "max_lat": -37.872,
-                "mode": "Train",
-                "short_name": "Pakenham",
-                "long_name": "Pakenham ↔ City",
-                "headsign": "City",
-                "shape_id": "PAKENHAM_01"
-            },
-            {
-                "feature_id": "casey_cran:1",
-                "points": 650,
-                "start_lon": 145.2832,
-                "start_lat": -38.1113,
-                "end_lon": 145.06,
-                "end_lat": -37.8763,
-                "length_km": 33.7,
-                "min_lon": 145.055,
-                "min_lat": -38.115,
-                "max_lon": 145.29,
-                "max_lat": -37.872,
-                "mode": "Train",
-                "short_name": "Cranbourne",
-                "long_name": "Cranbourne ↔ City",
-                "headsign": "City",
-                "shape_id": "CRANBOURNE_01"
-            }
-        ],
-        "stops": [
-            {
-                "stop_id": "casey_pakenham",
-                "stop_name": "Pakenham Station",
-                "mode": "Train",
-                "lon": 145.4816,
-                "lat": -38.0738
-            },
-            {
-                "stop_id": "casey_cranbourne",
-                "stop_name": "Cranbourne Station",
-                "mode": "Train",
-                "lon": 145.2832,
-                "lat": -38.1113
-            }
-        ]
-    }
+  "Melbourne": {
+    "lines": [
+      {
+        "feature_id": "melb_cbd:0",
+        "points": 420,
+        "start_lon": 144.963058,
+        "start_lat": -37.816572,
+        "end_lon": 144.952476,
+        "end_lat": -37.818271,
+        "length_km": 3.2,
+        "min_lon": 144.949,
+        "min_lat": -37.821,
+        "max_lon": 144.966,
+        "max_lat": -37.813,
+        "mode": "Train",
+        "short_name": "City Loop",
+        "long_name": "Parliament ↔ Flinders St ↔ Southern Cross",
+        "headsign": "Loop Inner",
+        "shape_id": "CBD_LOOP_01"
+      },
+      {
+        "feature_id": "melb_tram:11",
+        "points": 690,
+        "start_lon": 144.9719,
+        "start_lat": -37.8121,
+        "end_lon": 144.9464,
+        "end_lat": -37.8207,
+        "length_km": 6.7,
+        "min_lon": 144.944,
+        "min_lat": -37.824,
+        "max_lon": 144.973,
+        "max_lat": -37.808,
+        "mode": "Tram",
+        "short_name": "11",
+        "long_name": "Docklands ↔ Brunswick St",
+        "headsign": "Docklands",
+        "shape_id": "TRAM11_01"
+      }
+    ],
+    "stops": [
+      {
+        "stop_id": 20043,
+        "stop_name": "Southern Cross Station",
+        "mode": "Train",
+        "lon": 144.9520576,
+        "lat": -37.81838925
+      },
+      {
+        "stop_id": "melb_docklands_tram11",
+        "stop_name": "Docklands (Route 11)",
+        "mode": "Tram",
+        "lon": 144.9719,
+        "lat": -37.8121
+      }
+    ]
+  },
+
+  "Wyndham": {
+    "lines": [
+      {
+        "feature_id": "wynd_werribee:0",
+        "points": 1100,
+        "start_lon": 144.6594,
+        "start_lat": -37.9078,
+        "end_lon": 144.9631,
+        "end_lat": -37.8183,
+        "length_km": 32.4,
+        "min_lon": 144.652,
+        "min_lat": -37.913,
+        "max_lon": 144.971,
+        "max_lat": -37.812,
+        "mode": "Train",
+        "short_name": "Werribee",
+        "long_name": "Werribee ↔ City",
+        "headsign": "City via Newport",
+        "shape_id": "WERRIBEE_01"
+      }
+    ],
+    "stops": [
+      {
+        "stop_id": "wynd_werribee",
+        "stop_name": "Werribee Station",
+        "mode": "Train",
+        "lon": 144.6594,
+        "lat": -37.9078
+      },
+      {
+        "stop_id": "wynd_hoppers",
+        "stop_name": "Hoppers Crossing Station",
+        "mode": "Train",
+        "lon": 144.7002,
+        "lat": -37.8871
+      }
+    ]
+  },
+  "Monash": {
+    "lines": [
+      {
+        "feature_id": "monash_glenwaverley:0",
+        "points": 720,
+        "start_lon": 145.1640,
+        "start_lat": -37.8770,
+        "end_lon": 144.9670,
+        "end_lat": -37.8180,
+        "length_km": 19.5,
+        "min_lon": 144.960,
+        "min_lat": -37.890,
+        "max_lon": 145.170,
+        "max_lat": -37.810,
+        "mode": "Train",
+        "short_name": "Glen Waverley",
+        "long_name": "Glen Waverley ↔ City",
+        "headsign": "City",
+        "shape_id": "GLENWAV_01"
+      }
+    ],
+    "stops": [
+      {
+        "stop_id": "monash_glenwaverley",
+        "stop_name": "Glen Waverley Station",
+        "mode": "Train",
+        "lon": 145.1640,
+        "lat": -37.8770
+      },
+      {
+        "stop_id": "monash_syndal",
+        "stop_name": "Syndal Station",
+        "mode": "Train",
+        "lon": 145.1510,
+        "lat": -37.8775
+      }
+    ]
+  },
+
+  "Merri-bek": {
+    "lines": [
+      {
+        "feature_id": "merribek_upfield:0",
+        "points": 680,
+        "start_lon": 144.9610,
+        "start_lat": -37.7070,
+        "end_lon": 144.9630,
+        "end_lat": -37.8130,
+        "length_km": 11.8,
+        "min_lon": 144.955,
+        "min_lat": -37.820,
+        "max_lon": 144.970,
+        "max_lat": -37.700,
+        "mode": "Train",
+        "short_name": "Upfield",
+        "long_name": "Upfield ↔ City",
+        "headsign": "City",
+        "shape_id": "UPFIELD_01"
+      },
+      {
+        "feature_id": "merribek_tram19:0",
+        "points": 640,
+        "start_lon": 144.9612,
+        "start_lat": -37.7425,
+        "end_lon": 144.9624,
+        "end_lat": -37.8108,
+        "length_km": 9.3,
+        "min_lon": 144.957,
+        "min_lat": -37.820,
+        "max_lon": 144.966,
+        "max_lat": -37.740,
+        "mode": "Tram",
+        "short_name": "19",
+        "long_name": "North Coburg ↔ Flinders St",
+        "headsign": "City",
+        "shape_id": "TRAM19_MB_01"
+      }
+    ],
+    "stops": [
+      {
+        "stop_id": "merribek_coburg",
+        "stop_name": "Coburg Station",
+        "mode": "Train",
+        "lon": 144.9632,
+        "lat": -37.7429
+      },
+      {
+        "stop_id": "merribek_brunswick",
+        "stop_name": "Brunswick Station",
+        "mode": "Train",
+        "lon": 144.9627,
+        "lat": -37.7672
+      }
+    ]
+  },
+
+  "Brimbank": {
+    "lines": [
+      {
+        "feature_id": "brimbank_sunbury:0",
+        "points": 900,
+        "start_lon": 144.7280,
+        "start_lat": -37.5791,
+        "end_lon": 144.9520,
+        "end_lat": -37.8184,
+        "length_km": 23.0,
+        "min_lon": 144.720,
+        "min_lat": -37.585,
+        "max_lon": 144.955,
+        "max_lat": -37.810,
+        "mode": "Train",
+        "short_name": "Sunbury",
+        "long_name": "Sunbury ↔ City",
+        "headsign": "City",
+        "shape_id": "SUNBURY_01"
+      }
+    ],
+    "stops": [
+      {
+        "stop_id": 20020,
+        "stop_name": "Ardeer Station",
+        "mode": "Train",
+        "lon": 144.801542,
+        "lat": -37.7830262
+      },
+      {
+        "stop_id": "brimbank_sunshine",
+        "stop_name": "Sunshine Station",
+        "mode": "Train",
+        "lon": 144.8320,
+        "lat": -37.7800
+      }
+    ]
+  },
+
+  "Frankston": {
+    "lines": [
+      {
+        "feature_id": "frankston_line:0",
+        "points": 1100,
+        "start_lon": 145.1240,
+        "start_lat": -38.1440,
+        "end_lon": 144.9671,
+        "end_lat": -37.8180,
+        "length_km": 41.0,
+        "min_lon": 144.960,
+        "min_lat": -38.150,
+        "max_lon": 145.160,
+        "max_lat": -37.810,
+        "mode": "Train",
+        "short_name": "Frankston",
+        "long_name": "Frankston ↔ Flinders St",
+        "headsign": "City",
+        "shape_id": "FRANKSTON_01"
+      }
+    ],
+    "stops": [
+      {
+        "stop_id": "frankston_frankston",
+        "stop_name": "Frankston Station",
+        "mode": "Train",
+        "lon": 145.1240,
+        "lat": -38.1440
+      },
+      {
+        "stop_id": "frankston_kananook",
+        "stop_name": "Kananook Station",
+        "mode": "Train",
+        "lon": 145.1530,
+        "lat": -38.1240
+      }
+    ]
+  },
+
+  "Bayside": {
+    "lines": [
+      {
+        "feature_id": "bayside_sandringham:0",
+        "points": 640,
+        "start_lon": 145.0020,
+        "start_lat": -37.9500,
+        "end_lon": 144.9670,
+        "end_lat": -37.8180,
+        "length_km": 16.2,
+        "min_lon": 144.960,
+        "min_lat": -37.960,
+        "max_lon": 145.005,
+        "max_lat": -37.810,
+        "mode": "Train",
+        "short_name": "Sandringham",
+        "long_name": "Sandringham ↔ City",
+        "headsign": "City",
+        "shape_id": "SANDRINGHAM_01"
+      }
+    ],
+    "stops": [
+      {
+        "stop_id": "bayside_sandringham",
+        "stop_name": "Sandringham Station",
+        "mode": "Train",
+        "lon": 145.0020,
+        "lat": -37.9500
+      },
+      {
+        "stop_id": "bayside_brighton",
+        "stop_name": "Brighton Beach Station",
+        "mode": "Train",
+        "lon": 144.9980,
+        "lat": -37.9330
+      }
+    ]
+  },
+
+  "Knox": {
+    "lines": [
+      {
+        "feature_id": "knox_belgrave:0",
+        "points": 870,
+        "start_lon": 145.3560,
+        "start_lat": -37.9100,
+        "end_lon": 144.9670,
+        "end_lat": -37.8180,
+        "length_km": 35.6,
+        "min_lon": 144.960,
+        "min_lat": -37.920,
+        "max_lon": 145.360,
+        "max_lat": -37.810,
+        "mode": "Train",
+        "short_name": "Belgrave",
+        "long_name": "Belgrave ↔ City",
+        "headsign": "City",
+        "shape_id": "BELGRAVE_01"
+      }
+    ],
+    "stops": [
+      {
+        "stop_id": "knox_belgrave",
+        "stop_name": "Belgrave Station",
+        "mode": "Train",
+        "lon": 145.3560,
+        "lat": -37.9100
+      },
+      {
+        "stop_id": "knox_boronia",
+        "stop_name": "Boronia Station",
+        "mode": "Train",
+        "lon": 145.2850,
+        "lat": -37.8600
+      }
+    ]
+  },
+
+  "Latrobe": {
+    "lines": [
+      {
+        "feature_id": "latrobe_traralgon:0",
+        "points": 1200,
+        "start_lon": 146.5400,
+        "start_lat": -38.2000,
+        "end_lon": 145.0600,
+        "end_lat": -37.8763,
+        "length_km": 160.0,
+        "min_lon": 145.050,
+        "min_lat": -38.210,
+        "max_lon": 146.550,
+        "max_lat": -37.870,
+        "mode": "Train",
+        "short_name": "Traralgon",
+        "long_name": "Traralgon ↔ Melbourne",
+        "headsign": "City",
+        "shape_id": "TRARALGON_01"
+      }
+    ],
+    "stops": [
+      {
+        "stop_id": "latrobe_traralgon",
+        "stop_name": "Traralgon Station",
+        "mode": "Train",
+        "lon": 146.5400,
+        "lat": -38.2000
+      },
+      {
+        "stop_id": "latrobe_morwell",
+        "stop_name": "Morwell Station",
+        "mode": "Train",
+        "lon": 146.4000,
+        "lat": -38.2330
+      }
+    ]
+  },
+
+  "Greater Geelong": {
+    "lines": [
+      {
+        "feature_id": "geelong_line:0",
+        "points": 980,
+        "start_lon": 144.3600,
+        "start_lat": -38.1500,
+        "end_lon": 144.9630,
+        "end_lat": -37.8180,
+        "length_km": 75.0,
+        "min_lon": 144.350,
+        "min_lat": -38.160,
+        "max_lon": 144.970,
+        "max_lat": -37.810,
+        "mode": "Train",
+        "short_name": "Geelong",
+        "long_name": "Geelong ↔ Southern Cross",
+        "headsign": "City",
+        "shape_id": "GEELONG_01"
+      }
+    ],
+    "stops": [
+      {
+        "stop_id": "geelong_geelong",
+        "stop_name": "Geelong Station",
+        "mode": "Train",
+        "lon": 144.3600,
+        "lat": -38.1500
+      },
+      {
+        "stop_id": "geelong_south",
+        "stop_name": "South Geelong Station",
+        "mode": "Train",
+        "lon": 144.3605,
+        "lat": -38.1600
+      }
+    ]
+  },
+
+  "Yarra Ranges": {
+    "lines": [
+      {
+        "feature_id": "yarraranges_lilydale:0",
+        "points": 880,
+        "start_lon": 145.3530,
+        "start_lat": -37.7550,
+        "end_lon": 144.9671,
+        "end_lat": -37.8180,
+        "length_km": 34.0,
+        "min_lon": 144.960,
+        "min_lat": -37.820,
+        "max_lon": 145.360,
+        "max_lat": -37.740,
+        "mode": "Train",
+        "short_name": "Lilydale",
+        "long_name": "Lilydale ↔ City",
+        "headsign": "City",
+        "shape_id": "LILYDALE_01"
+      }
+    ],
+    "stops": [
+      { "stop_id": "yarraranges_lilydale", "stop_name": "Lilydale Station", "mode": "Train", "lon": 145.3530, "lat": -37.7550 },
+      { "stop_id": "yarraranges_mooroolbark", "stop_name": "Mooroolbark Station", "mode": "Train", "lon": 145.3150, "lat": -37.7860 }
+    ]
+  },
+
+  "Stonnington": {
+    "lines": [
+      {
+        "feature_id": "stonnington_tram:72",
+        "points": 600,
+        "start_lon": 145.0420,
+        "start_lat": -37.8510,
+        "end_lon": 144.9731,
+        "end_lat": -37.8111,
+        "length_km": 8.9,
+        "min_lon": 144.970,
+        "min_lat": -37.860,
+        "max_lon": 145.045,
+        "max_lat": -37.805,
+        "mode": "Tram",
+        "short_name": "72",
+        "long_name": "Camberwell ↔ Melbourne University",
+        "headsign": "University",
+        "shape_id": "TRAM72_STON_01"
+      }
+    ],
+    "stops": [
+      { "stop_id": "stonnington_malvern", "stop_name": "Malvern Station/Tram Interchange", "mode": "Tram", "lon": 145.0285, "lat": -37.8690 },
+      { "stop_id": "stonnington_toorak_rd", "stop_name": "Toorak Rd / Glenferrie Rd", "mode": "Tram", "lon": 145.0287, "lat": -37.8408 }
+    ]
+  },
+
+  "Banyule": {
+    "lines": [
+      {
+        "feature_id": "banyule_hurstbridge:0",
+        "points": 760,
+        "start_lon": 145.1230,
+        "start_lat": -37.7140,
+        "end_lon": 144.9630,
+        "end_lat": -37.8130,
+        "length_km": 21.5,
+        "min_lon": 144.955,
+        "min_lat": -37.820,
+        "max_lon": 145.130,
+        "max_lat": -37.700,
+        "mode": "Train",
+        "short_name": "Hurstbridge",
+        "long_name": "Greensborough ↔ City",
+        "headsign": "City",
+        "shape_id": "HURSTBRIDGE_01"
+      }
+    ],
+    "stops": [
+      { "stop_id": "banyule_greensborough", "stop_name": "Greensborough Station", "mode": "Train", "lon": 145.1030, "lat": -37.7035 },
+      { "stop_id": "banyule_heidelberg", "stop_name": "Heidelberg Station", "mode": "Train", "lon": 145.0700, "lat": -37.7565 }
+    ]
+  },
+
+  "Maroondah": {
+    "lines": [
+      {
+        "feature_id": "maroondah_belgrave:0",
+        "points": 820,
+        "start_lon": 145.2260,
+        "start_lat": -37.8180,
+        "end_lon": 144.9671,
+        "end_lat": -37.8180,
+        "length_km": 27.0,
+        "min_lon": 144.960,
+        "min_lat": -37.825,
+        "max_lon": 145.230,
+        "max_lat": -37.810,
+        "mode": "Train",
+        "short_name": "Belgrave",
+        "long_name": "Ringwood ↔ City",
+        "headsign": "City",
+        "shape_id": "BELGRAVE_MARO_01"
+      }
+    ],
+    "stops": [
+      { "stop_id": "maroondah_ringwood", "stop_name": "Ringwood Station", "mode": "Train", "lon": 145.2260, "lat": -37.8180 },
+      { "stop_id": "maroondah_croydon", "stop_name": "Croydon Station", "mode": "Train", "lon": 145.2800, "lat": -37.8000 }
+    ]
+  },
+
+  "Hobsons Bay": {
+    "lines": [
+      {
+        "feature_id": "hobsons_williamstown:0",
+        "points": 640,
+        "start_lon": 144.8960,
+        "start_lat": -37.8670,
+        "end_lon": 144.9671,
+        "end_lat": -37.8180,
+        "length_km": 9.8,
+        "min_lon": 144.890,
+        "min_lat": -37.875,
+        "max_lon": 144.970,
+        "max_lat": -37.810,
+        "mode": "Train",
+        "short_name": "Williamstown",
+        "long_name": "Williamstown ↔ City",
+        "headsign": "City",
+        "shape_id": "WILLIAMSTOWN_01"
+      }
+    ],
+    "stops": [
+      { "stop_id": "hobsons_williamstown", "stop_name": "Williamstown Station", "mode": "Train", "lon": 144.8960, "lat": -37.8670 },
+      { "stop_id": "hobsons_newport", "stop_name": "Newport Station", "mode": "Train", "lon": 144.8830, "lat": -37.8420 }
+    ]
+  }
 }
+
+
+
+  

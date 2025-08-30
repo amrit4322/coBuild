@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Card, Row, Col, ListGroup, Button, Modal, Form } from "react-bootstrap";
+import { Card, Row, Col, ListGroup, Button, Form, Modal } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 export default function CommunitySentiment() {
   // Example starting data
@@ -10,9 +11,8 @@ export default function CommunitySentiment() {
   const [satisfaction, setSatisfaction] = useState(78); // %
   const [totalResponses, setTotalResponses] = useState(123);
 
-  // Modal state
-  const [showModal, setShowModal] = useState(false);
   const [newFeedback, setNewFeedback] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubmitFeedback = () => {
     if (newFeedback.trim()) {
@@ -23,6 +23,13 @@ export default function CommunitySentiment() {
 
       // Update satisfaction dynamically (optional logic)
       setSatisfaction((prev) => Math.min(prev + Math.random() * 2 - 1, 100));
+
+      // Show success message
+      Swal.fire({
+        title: "Good job!",
+        text: "Thank you for your feedback!",
+        icon: "success"
+      });
     }
   };
 
@@ -60,7 +67,7 @@ export default function CommunitySentiment() {
               </div>
             </Card>
           </Col>
-        </Row>
+                 </Row>
 
         {/* Feedback Modal */}
         <Modal show={showModal} onHide={() => setShowModal(false)}>
@@ -76,6 +83,7 @@ export default function CommunitySentiment() {
                   rows={3}
                   value={newFeedback}
                   onChange={(e) => setNewFeedback(e.target.value)}
+                  placeholder="Enter your feedback here..."
                 />
               </Form.Group>
             </Form>
@@ -89,7 +97,8 @@ export default function CommunitySentiment() {
             </Button>
           </Modal.Footer>
         </Modal>
-      </Card.Body>
-    </Card>
-  );
-}
+
+       </Card.Body>
+     </Card>
+   );
+ }

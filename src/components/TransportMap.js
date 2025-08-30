@@ -4,7 +4,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import transportData from "../data/transportfile.json";
 
-// Fix for missing marker icons in Leaflet
+// Fix Leaflet marker icons
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
@@ -17,7 +17,7 @@ L.Icon.Default.mergeOptions({
 
 const center = [-37.8136, 144.9631]; // Melbourne
 
-// Function to color transport lines
+// Transport line colors
 const getColor = (mode) => {
   switch (mode) {
     case "Train":
@@ -29,36 +29,50 @@ const getColor = (mode) => {
   }
 };
 
-export default function TransportMap() {
+export default function TransportMap({ year = 2025 }) {
+  // Calculate year factor (0 for 2025, 1 for 2050)
+  const yearFactor = (year - 2022) / 25;
+
   return (
     <MapContainer
       center={center}
-      zoom={10}
-      style={{
-      height: "500px", width: "100%", borderRadius: "10px"
-      }}
+      zoom={11}
+      style={{ height: "500px", width: "100%", borderRadius: "10px" }}
     >
-      {/* OpenStreetMap Tiles (Free!) */}
+      {/* Map tiles */}
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
       />
 
-      {/* Render Stops & Lines from transportfile.json */}
+      {/* Transport Data */}
       {Object.keys(transportData).map((regionKey) => {
         const region = transportData[regionKey];
+
+        // Dynamically determine number of stops & lines based on year
+        const totalStops = region.stops.length;
+        const totalLines = region.lines.length;
+
+        const visibleStops = region.stops.slice(
+          0,
+          Math.floor(totalStops * (0.3 + yearFactor * 0.7)) // Start with 30% → 100%
+        );
+        const visibleLines = region.lines.slice(
+          0,
+          Math.floor(totalLines * (0.3 + yearFactor * 0.7)) // Start with 30% → 100%
+        );
 
         return (
           <React.Fragment key={regionKey}>
             {/* Stops */}
-            {region.stops.map((stop) => (
+            {visibleStops.map((stop) => (
               <Marker key={stop.stop_id} position={[stop.lat, stop.lon]}>
                 <Popup>{stop.stop_name}</Popup>
               </Marker>
             ))}
 
             {/* Lines */}
-            {region.lines.map((line) => (
+            {visibleLines.map((line) => (
               <Polyline
                 key={line.feature_id}
                 positions={[
