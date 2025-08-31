@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/coBuild/static/css/main.f8728204.css",
-    "main.js": "/coBuild/static/js/main.3d3f1dad.js",
+    "main.js": "/coBuild/static/js/main.565f8eef.js",
     "static/js/977.a867e45b.chunk.js": "/coBuild/static/js/977.a867e45b.chunk.js",
     "static/js/455.84503d71.chunk.js": "/coBuild/static/js/455.84503d71.chunk.js",
     "static/js/453.71be69eb.chunk.js": "/coBuild/static/js/453.71be69eb.chunk.js",
@@ -11,13 +11,13 @@
     "static/media/logo.svg": "/coBuild/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/coBuild/index.html",
     "main.f8728204.css.map": "/coBuild/static/css/main.f8728204.css.map",
-    "main.3d3f1dad.js.map": "/coBuild/static/js/main.3d3f1dad.js.map",
+    "main.565f8eef.js.map": "/coBuild/static/js/main.565f8eef.js.map",
     "977.a867e45b.chunk.js.map": "/coBuild/static/js/977.a867e45b.chunk.js.map",
     "455.84503d71.chunk.js.map": "/coBuild/static/js/455.84503d71.chunk.js.map",
     "453.71be69eb.chunk.js.map": "/coBuild/static/js/453.71be69eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f8728204.css",
-    "static/js/main.3d3f1dad.js"
+    "static/js/main.565f8eef.js"
   ]
 }
