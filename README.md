@@ -13,7 +13,7 @@ Victoria is growing faster than our infrastructure can keep up. Every housing ap
 Right now, housing approvals are often made **without a full picture** of how they affect schools, transport, and community wellbeing.  
 The result? **Pressure on residents, councils, and governments** that could have been predicted and prevented.
 
-*![][images/image1.png]*
+*![](images/image1.png)
 ---
 
 ## 👤 User Personas
@@ -67,18 +67,18 @@ A **centralised, data-driven dashboard** that combines housing, transport, schoo
 - 🗣️ **Community Voice:** AI-powered sentiment analysis + resident feedback.  
 - ⚖️ **Equity Lens:** Focuses on vulnerable communities most at risk.  
 
-![][images/image2.png]
+![](images/image2.png)
 
-![][images/image3.png]
+![](images/image3.png)
 
-![][images/image4.png]  
+![](images/image4.png)  
 ---
 
 ## ⚙️ How It Works
 1. **See today’s reality** → Housing costs, school crowding, bus frequency, and resident sentiment.  
 2. **Forecast tomorrow** → Example: “+300 homes → +50 students → transport at 90% load → rising concern about school access.”  
 3. **Act early** → Councils & planners get alerts before crises, backed by data & community input.  
- ![][images/image5.png]
+ ![](images/image5.png)
 
 ---
 
@@ -93,7 +93,7 @@ A **centralised, data-driven dashboard** that combines housing, transport, schoo
 ## 📍 Case Study Example
 > **“500 new homes approved in Brunswick → School capacity hits red, transport at 95%, childcare full in 2 years.”**  
 CoBuild flags this before approvals, giving decision-makers time to expand capacity, add bus routes, or rethink plans.
-![][images/image6.png]
+![](images/image6.png)
 ---
 
 ## 🛠️ Technical Overview
