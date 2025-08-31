@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Button, Row, Col, Card, Badge } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaBuilding, FaChartLine, FaMapMarkedAlt, FaUsers, FaArrowRight, FaGlobe, FaRocket, FaLightbulb, FaShieldAlt } from 'react-icons/fa';
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsVisible(true);
@@ -15,7 +16,7 @@ export default function HomePage() {
       {/* NAVBAR */}
       <Navbar expand="lg" className="navbar-enhanced" bg="white" variant="light" fixed="top">
         <Container>
-          <Navbar.Brand href="/" className="brand-enhanced">
+          <Navbar.Brand as={Link} to="/" className="brand-enhanced">
             <div className="brand-icon-wrapper">
               <FaBuilding className="brand-icon" />
             </div>
@@ -63,11 +64,11 @@ export default function HomePage() {
                   to make informed decisions about city development and infrastructure.
                 </p>
                 <div className="hero-buttons-enhanced">
-                  <Button variant="primary" size="lg" className="btn-primary-enhanced">
+                  <Button variant="primary" size="lg" className="btn-primary-enhanced" onClick={() => navigate("/dashboard")}>
                     Explore Platform
                     <FaArrowRight className="btn-icon" />
                   </Button>
-                  <Button variant="outline-light" size="lg" className="btn-secondary-enhanced">
+                  <Button variant="outline-light" size="lg" className="btn-secondary-enhanced" onClick={() => navigate("/dashboard")}>
                     <FaGlobe className="btn-icon" />
                     View Demo
                   </Button>

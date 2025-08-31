@@ -112,7 +112,7 @@ const ReportPage = () => {
       {/* NAVBAR */}
       <Navbar expand="lg" className="navbar-enhanced mb-4">
         <Container>
-          <Navbar.Brand href="/" className="brand-enhanced">
+          <Navbar.Brand as={Link} to="/" className="brand-enhanced">
             <div className="brand-icon-wrapper">
               <div className="brand-icon">🏗️</div>
             </div>

@@ -32,7 +32,7 @@ export default function Dashboard() {
           <Navbar.Toggle />
           <Navbar.Collapse>
             <Nav className="mx-auto">
-                <Nav.Link as={Link} to="/" className="text-secondary">
+                <Nav.Link as={Link} to="/cobuild" className="text-secondary">
                     Home
                 </Nav.Link>
               <Nav.Link as={Link} to="/map" className="text-secondary">

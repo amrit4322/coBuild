@@ -112,7 +112,7 @@ export default function Dashboard2() {
       {/* HEADER */}
      <Navbar expand="lg" className="navbar-enhanced" bg="white" variant="light" fixed="top">
         <Container>
-          <Navbar.Brand href="/" className="brand-enhanced">
+          <Navbar.Brand as={Link} to="/" className="brand-enhanced">
             <div className="brand-icon-wrapper">
               <FaBuilding className="brand-icon" />
             </div>
@@ -121,7 +121,7 @@ export default function Dashboard2() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav className="nav-enhanced">
-              <Nav.Link href="/" className="nav-link-enhanced">Home</Nav.Link>
+              <Nav.Link as={Link} to="/" className="nav-link-enhanced">Home</Nav.Link>
             
              
           
