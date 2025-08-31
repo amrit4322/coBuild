@@ -12,7 +12,7 @@ import Dashboard2 from './components/Dashboard2';
 
 function App() {
   return (
-     <Router>
+     <Router basename="/coBuild">
       
       <Routes>
         <Route path="/" element={<HomePage />} />
