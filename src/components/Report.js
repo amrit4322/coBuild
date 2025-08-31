@@ -119,8 +119,8 @@ const ReportPage = () => {
             <span className="brand-text">CoBuild</span>
           </Navbar.Brand>
           <Navbar.Toggle />
-          <Navbar.Collapse>
-            <Nav className="nav-enhanced mx-auto">
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <Nav className="nav-enhanced ">
               <Nav.Link as={Link} to="/" className="nav-link-enhanced">
                 Home
               </Nav.Link>
